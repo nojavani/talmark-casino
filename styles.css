@@ -1,0 +1,450 @@
+:root {
+  /* ------------- Color Variables------------*/
+  --logo-bar-btn-bg: #2f4e0f;
+  --logo-bar-btn-color: #fff;
+  --title-wrapper-color: #fff;
+  --chevron-down-icon-color: #f11a1a;
+  --entertainer-img-title-bg: #940707;
+  --entertainer-img-title-color: #fff;
+  --entertainer-img-desc-bg: #d42222;
+  --entertainer-img-desc-color: #fff;
+  --vacatures-title-color: #fff;
+  --vacatures-card-bg: #fff;
+  --vacatures-cards-left-border-color: #ffff00;
+  --card-header-color: #470979;
+  --card-footer-color: #5e129c;
+  --about-strip-bg: #260e53;
+  --about-titles-bg: rgba(89, 81, 207, 0.9);
+  --about-titles-color: #fff;
+  --footer-seperator-color: #ff0000;
+
+  /* ---------- Font Size Variables -------------- */
+  --normal-btn-font-size: clamp(0.3rem, 1vw, 1.5rem);
+  --xxl-header-size: clamp(2rem, 7vw, 6rem);
+  --l-header-text-size: clamp(1rem, 1.8vw, 3rem);
+  --s-footer-size: clamp(0.75rem, 1.2vw, 3rem);
+  --l-header-size: clamp(0.5rem, 3.5vw, 1.9rem);
+  --m-header-size: clamp(0.5rem, 4vw, 1.5rem);
+  --xl-header-size: clamp(0.75rem, 5vw, 3rem);
+  --l-text-size: clamp(0.4rem, 2.5vw, 1.2rem);
+  --l-footer-size: clamp(0.4rem, 3vw, 1.6rem);
+  --m-footer-size: clamp(0.4rem, 3.5vw, 1.3rem);
+  --m-title-size: clamp(0.5rem, 1.5vw, 2rem);
+  --m-text-size: clamp(0.75rem, 1vw, 1rem);
+  --s-text-size: clamp(0.5rem, 1vw, 1.5rem);
+  --xs-text-size: clamp(0.7rem, 2vw, 2.5rem);
+  --s-title-size: clamp(0.3rem, 1.6vw, 1.5rem);
+  --xxs-text-size: clamp(0.4rem, 2.3vw, 2rem);
+  --xxxs-text-size: clamp(0.05rem, 2vw, 2rem);
+}
+
+/*------------ General Styles ----------------*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+/*-------------- Logobar Section ----------*/
+.logo-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 3rem;
+  padding: 4rem 5rem;
+  position: sticky;
+  z-index: 999;
+  top: 0;
+}
+
+.logo-bar .btn {
+  text-decoration: none;
+  color: var(--logo-bar-btn-color);
+  font-size: var(--normal-btn-font-size);
+  padding: 0.7rem 2rem;
+  background-color: var(--logo-bar-btn-bg);
+  display: flex;
+}
+
+.logo-bar .logo img {
+  width: 50%;
+  height: auto;
+}
+
+@media screen and (max-width: 1000px) {
+  .logo-bar {
+    padding: 2rem 1rem;
+  }
+  .logo-bar .btn {
+    padding: 0.4rem 1rem;
+  }
+}
+
+/* ------------Title Section----------- */
+.title {
+  background: url("./assets/images/bg-vacatures.jpg");
+  background-size: cover;
+}
+
+.title-wrapper {
+  text-align: center;
+  color: var(--title-wrapper-color);
+  padding-top: 250px;
+  padding-bottom: 100px;
+}
+
+.title-wrapper .title-header {
+  font-size: var(--xxl-header-size);
+}
+
+.title-wrapper .title-content {
+  font-size: var(--l-header-text-size);
+}
+
+.title-wrapper .title-footer {
+  font-size: var(--s-footer-size);
+  margin-top: 15vh;
+}
+
+.fa-chevron-down {
+  color: var(--chevron-down-icon-color);
+}
+
+/*--------------- Entertainer Section -----------*/
+.entertainer-wrapper {
+  padding: 2rem 5vw 5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.entertainer-desc {
+  padding-right: 5rem;
+}
+
+.entertainer-desc-header {
+  margin-bottom: 1.5rem;
+  color: var(--card-header-color);
+  font-size: var(--l-header-size);
+}
+
+.entertainer-desc-content {
+  line-height: 2.5rem;
+  font-size: var(--l-text-size);
+}
+
+.entertainer-desc-footer {
+  margin-top: 1.5rem;
+  font-size: var(--l-footer-size);
+}
+
+.entertainer-img {
+  position: relative;
+}
+.entertainer-img img {
+  width: 100%;
+  height: 100%;
+}
+
+.entertainer-img-title {
+  position: absolute;
+  bottom: 0;
+  background: var(--entertainer-img-title-bg);
+  height: 40%;
+  width: 35%;
+  text-align: left;
+  color: var(--entertainer-img-title-color);
+  padding-top: 4%;
+  padding-left: 2%;
+  font-size: var(--m-title-size);
+}
+
+.entertainer-img-desc {
+  position: absolute;
+  bottom: 2rem;
+  background: var(--entertainer-img-desc-bg);
+  width: 95%;
+  text-align: left;
+  color: var(--entertainer-img-desc-color);
+  padding: 1rem;
+  line-height: 1.5rem;
+  font-size: var(--m-text-size);
+}
+
+@media screen and (max-width: 1150px) {
+  .entertainer-img-desc {
+    bottom: 1rem;
+    padding: 0.5rem;
+    font-size: var(--s-text-size);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .entertainer-wrapper {
+    grid-template-columns: 1fr;
+  }
+  .entertainer-img-desc {
+    bottom: 1.4rem;
+    padding: 0.9rem;
+    line-height: 1.2rem;
+    font-size: var(--xs-text-size);
+  }
+  .entertainer-desc {
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .entertainer-wrapper {
+    padding: 2rem 0;
+  }
+  .entertainer-desc {
+    padding: 0.75rem;
+  }
+  .entertainer-desc-content {
+    line-height: 1rem;
+  }
+  .entertainer-img-title {
+    padding: 0.5rem;
+    font-size: var(--s-title-size);
+  }
+  .entertainer-img-desc {
+    bottom: 0.6rem;
+    padding: 0.7rem;
+    line-height: 1.2rem;
+    font-size: var(--xxs-text-size);
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .entertainer-desc {
+    padding: 0.5rem;
+  }
+  .entertainer-img-title {
+    padding: 0.2rem;
+  }
+  .entertainer-img-desc {
+    bottom: 0.3rem;
+    padding: 0.3rem;
+    line-height: 0.5rem;
+    font-size: var(--xxxs-text-size);
+  }
+}
+
+/* -----------------Vacatures Section ----------------*/
+.vacatures {
+  background: url("./assets/images/bg-vacatures.jpg");
+  background-size: cover;
+}
+
+.vacatures-wrapper {
+  padding: 2rem 5vw 10rem;
+}
+
+.vacatures-title {
+  text-align: center;
+  color: var(--vacatures-title-color);
+  margin-bottom: 2rem;
+  font-size: var(--xl-header-size);
+}
+
+.vacatures-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.vacatures-card {
+  background: var(--vacatures-card-bg);
+  margin: 1rem;
+  padding: 1.5rem;
+  border-left: 0.75rem solid var(--vacatures-cards-left-border-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.vacatures-card-header {
+  margin-bottom: 1rem;
+  color: var(--card-header-color);
+  font-size: var(--m-header-size);
+}
+
+.vacatures-card-footer {
+  margin-top: 1.5rem;
+  color: var(--card-footer-color);
+  font-size: var(--m-footer-size);
+}
+
+.vacatures-card-content {
+  line-height: 2rem;
+  font-size: var(--l-text-size);
+}
+
+@media screen and (max-width: 1100px) {
+  .vacatures-wrapper {
+    padding-bottom: 5rem;
+  }
+  .vacatures-cards {
+    grid-template-columns: 1fr;
+  }
+  .vacatures-title {
+    margin-bottom: 1rem;
+    /* font-size: var(--l-header-size); */
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .vacatures-wrapper {
+    padding: 0.5rem;
+  }
+  .vacatures-title {
+    margin-bottom: 0.5rem;
+  }
+  .vacatures-card {
+    padding: 0.5rem;
+  }
+  .vacatures-card-content {
+    line-height: 1rem;
+  }
+}
+
+/*-------------- About Section ---------------*/
+.about {
+  position: relative;
+}
+
+.about-strip {
+  position: absolute;
+  width: 5vw;
+  height: 100%;
+  background: var(--about-strip-bg);
+  bottom: 0;
+}
+
+.about-desc {
+  padding: 4rem 13vw;
+}
+
+.about-desc .about-header {
+  margin-bottom: 2rem;
+  font-size: var(--xl-header-size);
+  color: var(--card-footer-color);
+}
+
+.about-desc .about-content {
+  line-height: 2rem;
+  font-size: var(--l-text-size);
+}
+
+.about-img img {
+  width: 100%;
+  height: 100%;
+}
+
+.about-summary {
+  position: relative;
+}
+
+.about-titles {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  color: var(--title-wrapper-color);
+  background: var(--about-titles-bg);
+  z-index: 999;
+}
+
+.about-titles img {
+  width: 15%;
+  height: auto;
+  padding-right: 1rem;
+}
+
+.about-titles div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-titles span {
+  padding: 1rem;
+  border-bottom: 1px solid var(--about-titles-color);
+  width: 60%;
+  font-size: var(--s-title-size);
+}
+
+@media screen and (max-width: 1200px) {
+  .about-desc {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  .about-desc .about-header {
+    margin-bottom: 1.2rem;
+  }
+
+  .about-desc .about-content {
+    line-height: 1.5rem;
+  }
+  .about-titles {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 1rem;
+  }
+  .about-titles img {
+    width: 10%;
+    padding-right: 0.5rem;
+  }
+  .about-titles span {
+    padding: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .about-desc {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  .about-desc .about-header {
+    margin-bottom: 1rem;
+  }
+
+  .about-desc .about-content {
+    line-height: 1rem;
+  }
+  .about-titles {
+    padding: 0.5rem;
+  }
+  .about-titles img {
+    width: 5%;
+    padding-right: 0.2rem;
+  }
+  .about-titles span {
+    padding: 0rem;
+  }
+}
+
+/* ------------Footer Section ----------------*/
+.footer {
+  padding: 1.5rem 5vw;
+  font-size: var(--s-title-size);
+}
+
+.footer ul {
+  list-style: none;
+  display: inline-flex;
+}
+
+.footer ul li::before {
+  content: "\2022";
+  color: var(--footer-seperator-color);
+  font-weight: bold;
+  width: 1em;
+  padding: 0.2rem;
+}
